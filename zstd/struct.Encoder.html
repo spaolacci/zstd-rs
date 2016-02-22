@@ -56,6 +56,11 @@
 <div class='docblock'><p>Creates a new encoder.</p>
 
 <p><code>level</code>: compression level (1-21)</p>
+</div><h4 id='method.with_dictionary' class='method'><code>fn <a href='#method.with_dictionary' class='fnname'>with_dictionary</a>(writer: W, level: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, dictionary: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>IoResult</a>&lt;Self&gt;</code></h4>
+<div class='docblock'><p>Creates a new encoder, using an existing dictionary.</p>
+
+<p>(Provides better compression ratio for small files,
+but requires the dictionary to be present during decompression.)</p>
 </div><h4 id='method.finish' class='method'><code>fn <a href='#method.finish' class='fnname'>finish</a>(self) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>IoResult</a>&lt;W&gt;</code></h4>
 <div class='docblock'><p>Finishes the stream. You need to call this after writing your stuff.</p>
 
