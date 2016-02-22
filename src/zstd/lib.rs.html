@@ -76,13 +76,41 @@
 <span id="33">33</span>
 <span id="34">34</span>
 <span id="35">35</span>
+<span id="36">36</span>
+<span id="37">37</span>
+<span id="38">38</span>
+<span id="39">39</span>
+<span id="40">40</span>
+<span id="41">41</span>
+<span id="42">42</span>
+<span id="43">43</span>
+<span id="44">44</span>
+<span id="45">45</span>
+<span id="46">46</span>
+<span id="47">47</span>
+<span id="48">48</span>
+<span id="49">49</span>
 </pre><pre class='rust '>
 <span class='doccomment'>//! Rust binding to the [zstd library][zstd].</span>
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! This crate provides:</span>
 <span class='doccomment'>//!</span>
-<span class='doccomment'>//! * `Encoder` to compress data using zstd and send the output to another write.</span>
-<span class='doccomment'>//! * `Decoder` to read input data from a `Read` and decompress it.</span>
+<span class='doccomment'>//! * An [encoder](struct.Encoder.html) to compress data using zstd and send the output to another write.</span>
+<span class='doccomment'>//! * A [decoder](struct.Decoder.html) to read input data from a `Read` and decompress it.</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! # Example</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! ```rust</span>
+<span class='doccomment'>//! extern crate zstd;</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! use std::io;</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! fn main() {</span>
+<span class='doccomment'>//! 	// Uncompress input and print the result.</span>
+<span class='doccomment'>//! 	let mut decoder = zstd::Decoder::new(io::stdin()).unwrap();</span>
+<span class='doccomment'>//! 	io::copy(&amp;mut decoder, &amp;mut io::stdout()).unwrap();</span>
+<span class='doccomment'>//! }</span>
+<span class='doccomment'>//! ```</span>
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! [zstd]: https://github.com/Cyan4973/zstd</span>
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>libc</span>;
@@ -96,7 +124,7 @@
 
 <span class='attribute'>#[<span class='ident'>test</span>]</span>
 <span class='kw'>fn</span> <span class='ident'>test_cycle</span>() {
-    <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::{<span class='ident'>Read</span>,<span class='ident'>Write</span>};
+    <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::{<span class='ident'>Read</span>, <span class='ident'>Write</span>};
     <span class='kw'>let</span> <span class='ident'>text</span> <span class='op'>=</span> <span class='string'>&quot;This is a sample text. It is not meant to be interesting or anything. Just text, \
                 nothing more. Don&#39;t expect too much from it.&quot;</span>;
 
