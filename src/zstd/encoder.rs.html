@@ -183,6 +183,11 @@
 <span id="140">140</span>
 <span id="141">141</span>
 <span id="142">142</span>
+<span id="143">143</span>
+<span id="144">144</span>
+<span id="145">145</span>
+<span id="146">146</span>
+<span id="147">147</span>
 </pre><pre class='rust '>
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::{<span class='ident'>Write</span>, <span class='prelude-ty'>Result</span> <span class='kw'>as</span> <span class='ident'>IoResult</span>};
 
@@ -285,6 +290,11 @@
         <span class='comment'>// Return the writer, because why not</span>
         <span class='prelude-val'>Ok</span>(<span class='self'>self</span>.<span class='ident'>writer</span>)
     }
+
+    <span class='doccomment'>/// Return a recommendation for the size of data to write at once.</span>
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>recommended_input_size</span>() <span class='op'>-&gt;</span> <span class='ident'>usize</span> {
+        <span class='kw'>unsafe</span> { <span class='ident'>ll</span>::<span class='ident'>ZBUFF_recommendedCInSize</span>() }
+    }
 }
 
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='ident'>W</span>: <span class='ident'>Write</span><span class='op'>&gt;</span> <span class='ident'>Write</span> <span class='kw'>for</span> <span class='ident'>Encoder</span><span class='op'>&lt;</span><span class='ident'>W</span><span class='op'>&gt;</span> {
@@ -305,7 +315,7 @@
                 <span class='self'>self</span>.<span class='ident'>buffer</span>.<span class='ident'>set_len</span>(<span class='ident'>out_size</span>);
 
                 <span class='comment'>// Do we care about the hint?</span>
-                <span class='kw'>let</span> <span class='ident'>hint</span> <span class='op'>=</span> <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>ll</span>::<span class='ident'>parse_code</span>(<span class='ident'>code</span>));
+                <span class='kw'>let</span> _ <span class='op'>=</span> <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>ll</span>::<span class='ident'>parse_code</span>(<span class='ident'>code</span>));
             }
             <span class='macro'>try</span><span class='macro'>!</span>(<span class='self'>self</span>.<span class='ident'>writer</span>.<span class='ident'>write_all</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>buffer</span>));
             <span class='ident'>read</span> <span class='op'>+=</span> <span class='ident'>in_size</span>;

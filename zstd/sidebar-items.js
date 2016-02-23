@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Decoder","A decoder that decompress input data from another `Read`."],["Encoder","An encoder that compress and forward data to another writer."]]});
+initSidebarItems({"fn":[["train_dict","Trains a dictionary to improve compression of small files."]],"struct":[["Decoder","A decoder that decompress input data from another `Read`."],["Encoder","An encoder that compress and forward data to another writer."]]});

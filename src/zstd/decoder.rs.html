@@ -156,6 +156,11 @@
 <span id="113">113</span>
 <span id="114">114</span>
 <span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
 </pre><pre class='rust '>
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::{<span class='ident'>Read</span>, <span class='prelude-ty'>Result</span> <span class='kw'>as</span> <span class='ident'>IoResult</span>};
 
@@ -224,6 +229,11 @@
             <span class='ident'>context</span>: <span class='ident'>context</span>,
         })
     }
+
+    <span class='doccomment'>/// Recommendation for the size of the output buffer.</span>
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>recommended_output_size</span>() <span class='op'>-&gt;</span> <span class='ident'>usize</span> {
+        <span class='kw'>unsafe</span> { <span class='ident'>ll</span>::<span class='ident'>ZBUFF_recommendedDOutSize</span>() }
+    }
 }
 
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='ident'>R</span>: <span class='ident'>Read</span><span class='op'>&gt;</span> <span class='ident'>Read</span> <span class='kw'>for</span> <span class='ident'>Decoder</span><span class='op'>&lt;</span><span class='ident'>R</span><span class='op'>&gt;</span> {
@@ -263,7 +273,7 @@
                                                         <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>out_size</span>,
                                                         <span class='self'>self</span>.<span class='ident'>buffer</span>[<span class='self'>self</span>.<span class='ident'>offset</span>..].<span class='ident'>as_ptr</span>(),
                                                         <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>in_size</span>);
-                <span class='kw'>let</span> <span class='ident'>hint</span> <span class='op'>=</span> <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>ll</span>::<span class='ident'>parse_code</span>(<span class='ident'>code</span>));
+                <span class='kw'>let</span> _ <span class='op'>=</span> <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>ll</span>::<span class='ident'>parse_code</span>(<span class='ident'>code</span>));
             }
 
             <span class='ident'>written</span> <span class='op'>+=</span> <span class='ident'>out_size</span>;
