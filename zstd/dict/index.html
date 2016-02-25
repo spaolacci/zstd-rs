@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="API documentation for the Rust `ZBUFF_getErrorName` fn in crate `zstd`.">
-    <meta name="keywords" content="rust, rustlang, rust-lang, ZBUFF_getErrorName">
+    <meta name="description" content="API documentation for the Rust `dict` mod in crate `zstd`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, dict">
 
-    <title>zstd::ll::ZBUFF_getErrorName - Rust</title>
+    <title>zstd::dict - Rust</title>
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
@@ -27,7 +27,7 @@
 
     <nav class="sidebar">
         
-        <p class='location'><a href='../index.html'>zstd</a>::<wbr><a href='index.html'>ll</a></p><script>window.sidebarCurrent = {name: 'ZBUFF_getErrorName', ty: 'fn', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+        <p class='location'><a href='../index.html'>zstd</a></p><script>window.sidebarCurrent = {name: 'dict', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
     </nav>
 
     <nav class="sub">
@@ -41,13 +41,44 @@
         </form>
     </nav>
 
-    <section id='main' class="content fn">
-<h1 class='fqn'><span class='in-band'><a href='../index.html'>zstd</a>::<wbr><a href='index.html'>ll</a>::<wbr><a class='fn' href=''>ZBUFF_getErrorName</a></span><span class='out-of-band'><span id='render-detail'>
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>zstd</a>::<wbr><a class='mod' href=''>dict</a></span><span class='out-of-band'><span id='render-detail'>
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-60' class='srclink' href='../../src/zstd/ll.rs.html#136' title='goto source code'>[src]</a></span></h1>
-<pre class='rust fn'>pub unsafe extern fn ZBUFF_getErrorName(errorCode: <a class='type' href='../../libc/type.size_t.html' title='libc::size_t'>size_t</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='type' href='../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html' title='libc::unix::notbsd::linux::other::b64::x86_64::c_char'>c_char</a></pre></section>
+        </span><a id='src-190' class='srclink' href='../../src/zstd/dict.rs.html#1-58' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Train a dictionary from various sources.</p>
+
+<p>A dictionary can help improve the compression of small files.
+The dictionary must be present during decompression,
+but can be shared accross multiple &quot;similar&quot; files.</p>
+
+<p>Creating a dictionary created using the <code>zstd</code> C library,
+using the <code>zstd</code> command-line interface, using this library,
+or using the <code>train</code> binary provided, should give the same result,
+and are therefore completely compatible.</p>
+
+<p>To use, see <a href="../struct.Encoder.html#method.with_dictionary"><code>Encoder::with_dictionary</code></a> or <a href="../struct.Decoder.html#method.with_dictionary"><code>Decoder::with_dictionary</code></a>.</p>
+</div><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.from_continuous.html'
+                               title='zstd::dict::from_continuous'>from_continuous</a></td>
+                        <td class='docblock short'>
+                             <p>Train a dictionary from a big continuous chunk of data.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.from_samples.html'
+                               title='zstd::dict::from_samples'>from_samples</a></td>
+                        <td class='docblock short'>
+                             <p>Train a dictionary from multiple samples.</p>
+
+                        </td>
+                    </tr>
+                </table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>

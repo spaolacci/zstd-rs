@@ -46,7 +46,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-0' class='srclink' href='../src/zstd/lib.rs.html#1-69' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-0' class='srclink' href='../src/zstd/lib.rs.html#1-55' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Rust binding to the <a href="https://github.com/Cyan4973/zstd">zstd library</a>.</p>
 
 <p>This crate provides:</p>
@@ -66,7 +66,17 @@
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>decoder</span> <span class='op'>=</span> <span class='ident'>zstd</span>::<span class='ident'>Decoder</span>::<span class='ident'>new</span>(<span class='ident'>io</span>::<span class='ident'>stdin</span>()).<span class='ident'>unwrap</span>();
     <span class='ident'>io</span>::<span class='ident'>copy</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>decoder</span>, <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>io</span>::<span class='ident'>stdout</span>()).<span class='ident'>unwrap</span>();
 }</pre>
-</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='mod' href='dict/index.html'
+                               title='zstd::dict'>dict</a></td>
+                        <td class='docblock short'>
+                             <p>Train a dictionary from various sources.</p>
+
+                        </td>
+                    </tr>
+                </table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
                     <tr class=' module-item'>
                         <td><a class='struct' href='struct.Decoder.html'
@@ -82,16 +92,6 @@
                                title='zstd::Encoder'>Encoder</a></td>
                         <td class='docblock short'>
                              <p>An encoder that compress and forward data to another writer.</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
-<table>
-                    <tr class=' module-item'>
-                        <td><a class='fn' href='fn.train_dict.html'
-                               title='zstd::train_dict'>train_dict</a></td>
-                        <td class='docblock short'>
-                             <p>Trains a dictionary to improve compression of small files.</p>
 
                         </td>
                     </tr>

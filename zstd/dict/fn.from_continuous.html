@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="API documentation for the Rust `ZBUFF_decompressInit` fn in crate `zstd`.">
-    <meta name="keywords" content="rust, rustlang, rust-lang, ZBUFF_decompressInit">
+    <meta name="description" content="API documentation for the Rust `from_continuous` fn in crate `zstd`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, from_continuous">
 
-    <title>zstd::ll::ZBUFF_decompressInit - Rust</title>
+    <title>zstd::dict::from_continuous - Rust</title>
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
@@ -27,7 +27,7 @@
 
     <nav class="sidebar">
         
-        <p class='location'><a href='../index.html'>zstd</a>::<wbr><a href='index.html'>ll</a></p><script>window.sidebarCurrent = {name: 'ZBUFF_decompressInit', ty: 'fn', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+        <p class='location'><a href='../index.html'>zstd</a>::<wbr><a href='index.html'>dict</a></p><script>window.sidebarCurrent = {name: 'from_continuous', ty: 'fn', relpath: ''};</script><script defer src="sidebar-items.js"></script>
     </nav>
 
     <nav class="sub">
@@ -42,12 +42,13 @@
     </nav>
 
     <section id='main' class="content fn">
-<h1 class='fqn'><span class='in-band'><a href='../index.html'>zstd</a>::<wbr><a href='index.html'>ll</a>::<wbr><a class='fn' href=''>ZBUFF_decompressInit</a></span><span class='out-of-band'><span id='render-detail'>
+<h1 class='fqn'><span class='in-band'>Function <a href='../index.html'>zstd</a>::<wbr><a href='index.html'>dict</a>::<wbr><a class='fn' href=''>from_continuous</a></span><span class='out-of-band'><span id='render-detail'>
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-46' class='srclink' href='../../src/zstd/ll.rs.html#123' title='goto source code'>[src]</a></span></h1>
-<pre class='rust fn'>pub unsafe extern fn ZBUFF_decompressInit(dctx: <a class='type' href='../../zstd/ll/type.ZBUFFDecompressionContext.html' title='zstd::ll::ZBUFFDecompressionContext'>ZBUFFDecompressionContext</a>) -&gt; <a class='type' href='../../libc/type.size_t.html' title='libc::size_t'>size_t</a></pre></section>
+        </span><a id='src-194' class='srclink' href='../../src/zstd/dict.rs.html#21-42' title='goto source code'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn from_continuous(sample_data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>, sample_sizes: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>, max_size: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/std/io/error/type.Result.html' title='std::io::error::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;&gt;</pre><div class='docblock'><p>Train a dictionary from a big continuous chunk of data.</p>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
