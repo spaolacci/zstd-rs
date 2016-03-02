@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Encoder","An encoder that compress and forward data to another writer."]]});
+initSidebarItems({"struct":[["Encoder","An encoder that compress and forward data to another writer.The zstd library has an internal input buffer (~128kb)."]]});

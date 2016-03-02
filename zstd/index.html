@@ -46,14 +46,16 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-0' class='srclink' href='../src/zstd/lib.rs.html#1-55' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-0' class='srclink' href='../src/zstd/lib.rs.html#1-133' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Rust binding to the <a href="https://github.com/Cyan4973/zstd">zstd library</a>.</p>
 
 <p>This crate provides:</p>
 
 <ul>
-<li>An <a href="struct.Encoder.html">encoder</a> to compress data using zstd and send the output to another write.</li>
-<li>A <a href="struct.Decoder.html">decoder</a> to read input data from a <code>Read</code> and decompress it.</li>
+<li>An <a href="struct.Encoder.html">encoder</a> to compress data using zstd
+and send the output to another write.</li>
+<li>A <a href="struct.Decoder.html">decoder</a> to read input data from a <code>Read</code>
+and decompress it.</li>
 </ul>
 
 <h1 id='example' class='section-header'><a href='#example'>Example</a></h1><pre class='rust rust-example-rendered'>
@@ -73,7 +75,6 @@
                                title='zstd::dict'>dict</a></td>
                         <td class='docblock short'>
                              <p>Train a dictionary from various sources.</p>
-
                         </td>
                     </tr>
                 </table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
@@ -83,7 +84,6 @@
                                title='zstd::Decoder'>Decoder</a></td>
                         <td class='docblock short'>
                              <p>A decoder that decompress input data from another <code>Read</code>.</p>
-
                         </td>
                     </tr>
                 
@@ -92,7 +92,39 @@
                                title='zstd::Encoder'>Encoder</a></td>
                         <td class='docblock short'>
                              <p>An encoder that compress and forward data to another writer.</p>
-
+                        </td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.compress.html'
+                               title='zstd::compress'>compress</a></td>
+                        <td class='docblock short'>
+                             <p>Compress a single block of data to the given destination buffer.</p>
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.compress_to_vec.html'
+                               title='zstd::compress_to_vec'>compress_to_vec</a></td>
+                        <td class='docblock short'>
+                             <p>Compress a block of data, and return the compressed result in a <code>Vec&lt;u8&gt;</code>.</p>
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.decompress.html'
+                               title='zstd::decompress'>decompress</a></td>
+                        <td class='docblock short'>
+                             <p>Deompress a single block of data to the given destination buffer.</p>
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.decompress_to_vec.html'
+                               title='zstd::decompress_to_vec'>decompress_to_vec</a></td>
+                        <td class='docblock short'>
+                             <p>Decompress a block of data, and return the decompressed result in a <code>Vec&lt;u8&gt;</code>.</p>
                         </td>
                     </tr>
                 </table></section>
@@ -138,7 +170,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
