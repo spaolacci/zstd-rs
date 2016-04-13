@@ -199,6 +199,8 @@
 <span id="155">155</span>
 <span id="156">156</span>
 <span id="157">157</span>
+<span id="158">158</span>
+<span id="159">159</span>
 </pre><pre class='rust '>
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::{<span class='self'>self</span>, <span class='ident'>Write</span>};
 
@@ -221,8 +223,10 @@
     }
 }
 
-
 <span class='doccomment'>/// An encoder that compress and forward data to another writer.</span>
+<span class='doccomment'>///</span>
+<span class='doccomment'>/// This allows to compress a stream of data</span>
+<span class='doccomment'>/// (good for files or heavy network stream).</span>
 <span class='doccomment'>///</span>
 <span class='doccomment'>/// Don&#39;t forget to call `finish()` before dropping it!</span>
 <span class='doccomment'>///</span>

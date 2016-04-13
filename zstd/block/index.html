@@ -47,8 +47,12 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-203' class='srclink' href='../../src/zstd/src/block.rs.html#1-91' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-203' class='srclink' href='../../src/zstd/src/block.rs.html#1-95' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Methods to compress and decompress individual blocks.</p>
+
+<p>These methods process all the input data at once.
+It is therefore best used with relatively small blocks
+(like small network packets).</p>
 </div><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
 <table>
                        <tr class=' module-item'>
