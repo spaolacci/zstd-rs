@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["from_continuous","Train a dictionary from a big continuous chunk of data."],["from_samples","Train a dictionary from multiple samples.The samples will internaly be copied to a single continuous buffer, so make sure you have enough memory available."]]});
+initSidebarItems({"fn":[["from_continuous","Train a dictionary from a big continuous chunk of data."],["from_samples","Train a dictionary from multiple samples."]]});

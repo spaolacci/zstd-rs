@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -43,10 +44,10 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>zstd</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-0' class='srclink' href='../src/zstd/lib.rs.html#1-133' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/zstd/src/lib.rs.html#1-76' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Rust binding to the <a href="https://github.com/Cyan4973/zstd">zstd library</a>.</p>
 
 <p>This crate provides:</p>
@@ -58,7 +59,8 @@ and send the output to another write.</li>
 and decompress it.</li>
 </ul>
 
-<h1 id='example' class='section-header'><a href='#example'>Example</a></h1><pre class='rust rust-example-rendered'>
+<h1 id='example' class='section-header'><a href='#example'>Example</a></h1>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>zstd</span>;
 
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>;
@@ -70,64 +72,50 @@ and decompress it.</li>
 }</pre>
 </div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='dict/index.html'
-                               title='zstd::dict'>dict</a></td>
-                        <td class='docblock short'>
-                             <p>Train a dictionary from various sources.</p>
-                        </td>
-                    </tr>
-                </table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='block/index.html'
+                                  title='zstd::block'>block</a></td>
+                           <td class='docblock short'>
+                                <p>Methods to compress and decompress individual blocks.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='dict/index.html'
+                                  title='zstd::dict'>dict</a></td>
+                           <td class='docblock short'>
+                                <p>Train a dictionary from various sources.</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Decoder.html'
-                               title='zstd::Decoder'>Decoder</a></td>
-                        <td class='docblock short'>
-                             <p>A decoder that decompress input data from another <code>Read</code>.</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Encoder.html'
-                               title='zstd::Encoder'>Encoder</a></td>
-                        <td class='docblock short'>
-                             <p>An encoder that compress and forward data to another writer.</p>
-                        </td>
-                    </tr>
-                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Decoder.html'
+                                  title='zstd::Decoder'>Decoder</a></td>
+                           <td class='docblock short'>
+                                <p>A decoder that decompress input data from another <code>Read</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Encoder.html'
+                                  title='zstd::Encoder'>Encoder</a></td>
+                           <td class='docblock short'>
+                                <p>An encoder that compress and forward data to another writer.</p>
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='fn' href='fn.compress.html'
-                               title='zstd::compress'>compress</a></td>
-                        <td class='docblock short'>
-                             <p>Compress a single block of data to the given destination buffer.</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='fn' href='fn.compress_to_vec.html'
-                               title='zstd::compress_to_vec'>compress_to_vec</a></td>
-                        <td class='docblock short'>
-                             <p>Compress a block of data, and return the compressed result in a <code>Vec&lt;u8&gt;</code>.</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='fn' href='fn.decompress.html'
-                               title='zstd::decompress'>decompress</a></td>
-                        <td class='docblock short'>
-                             <p>Deompress a single block of data to the given destination buffer.</p>
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='fn' href='fn.decompress_to_vec.html'
-                               title='zstd::decompress_to_vec'>decompress_to_vec</a></td>
-                        <td class='docblock short'>
-                             <p>Decompress a block of data, and return the decompressed result in a <code>Vec&lt;u8&gt;</code>.</p>
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.decode_all.html'
+                                  title='zstd::decode_all'>decode_all</a></td>
+                           <td class='docblock short'>
+                                <p>Decompress the given data as if using a <code>Decoder</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.encode_all.html'
+                                  title='zstd::encode_all'>encode_all</a></td>
+                           <td class='docblock short'>
+                                <p>Compress all the given data as if using an <code>Encoder</code>.</p>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
