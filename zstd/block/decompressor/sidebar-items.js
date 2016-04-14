@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Decompressor","Allows to decompress multiple blocks of data, re-using the context."]]});

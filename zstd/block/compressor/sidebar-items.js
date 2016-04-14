@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Compressor","Allows to compress multiple blocks of data, re-using the context."]]});
